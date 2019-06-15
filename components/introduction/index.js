@@ -5,6 +5,9 @@ import Link from 'next/link'
 // Components
 import Footer from '../footer'
 
+// UI
+import theme from '../../ui/theme'
+
 class Introduction extends PureComponent {
   render() {
     return (
@@ -57,17 +60,13 @@ class Introduction extends PureComponent {
 
         <style jsx>{`
           section {
-            flex-basis: 50%;
-            width: 50%;
-            padding: 100px 48px;
-            max-height: 100vh;
-            overflow-y: hidden;
+            padding: ${theme.spacing.xxxLarge} ${theme.spacing.xLarge};
           }
 
           h1 {
             font-size: 40px;
             font-weight: 400;
-            margin-bottom: 16px;
+            margin-bottom: ${theme.spacing.medium};
           }
 
           h2 {
@@ -75,24 +74,24 @@ class Introduction extends PureComponent {
             font-size: 16px;
             color: #aaa;
             line-height: 26px;
-            margin-bottom: 32px;
+            margin-bottom: ${theme.spacing.xxLarge};
           }
 
           h3 {
             font-size: 40px;
-            color: #000;
+            color: ${theme.colors.black};
           }
 
           a {
-            color: #fff;
+            color: ${theme.colors.white};
           }
 
           li {
             background-color: transparent;
-            margin-bottom: 24px;
-            border-radius: 4px;
-            padding: 16px;
-            transition: 0.25s;
+            margin-bottom: ${theme.spacing.large};
+            border-radius: ${theme.radius.medium};
+            padding: ${theme.spacing};
+            transition: ${theme.transition};
             cursor: pointer;
           }
 
@@ -108,7 +107,17 @@ class Introduction extends PureComponent {
           p {
             font-size: 13px;
             color: #aaa;
-            margin-top: 4px;
+            margin-top: ${theme.spacing.small};
+          }
+
+          @media ${theme.responsive.small}, ${theme.responsive.medium}, ${theme.responsive.large} {
+            section {
+              flex-basis: 50%;
+              width: 50%;
+              padding: 100px 48px;
+              max-height: 100vh;
+              overflow-y: hidden;
+            }
           }
         `}</style>
       </section>

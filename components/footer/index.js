@@ -2,6 +2,9 @@
 import React, { PureComponent } from 'react'
 import Link from 'next/link'
 
+// UI
+import theme from '../../ui/theme'
+
 class Footer extends PureComponent {
   render() {
     return (
@@ -31,12 +34,12 @@ class Footer extends PureComponent {
 
         <style jsx>{`
           ul {
-            margin-top: 40px;
+            margin-top: ${theme.spacing.xxLarge};
           }
 
           li {
             display: inline-block;
-            margin-right: 16px;
+            margin-right: ${theme.spacing.medium}];
           }
 
           a {

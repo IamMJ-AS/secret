@@ -11,6 +11,9 @@ import Page from '../layouts/page'
 // Components
 import Introduction from '../components/introduction'
 
+// UI
+import theme from '../ui/theme'
+
 const WebContent = dynamic({ loader: () => import('../components/web') })
 const CliContent = dynamic({ loader: () => import('../components/cli') })
 const SlackContent = dynamic({ loader: () => import('../components/slack') })
@@ -41,17 +44,22 @@ class Home extends Component {
           </section>
 
           <style jsx>{`
-            main {
-              display: flex;
-              justify-content: space-between;
-              min-height: 100vh;
-            }
+            @media ${theme.responsive.small},
+              ${theme.responsive.medium},
+              ${theme.responsive.large} {
+              main {
+                display: flex;
+                justify-content: space-between;
+                min-height: 100vh;
+                flex-wrap: wrap;
+              }
 
-            .product {
-              flex-basis: 50%;
-              width: 50%;
-              background-color: #fff;
-              padding: 100px 48px;
+              .product {
+                flex-basis: 50%;
+                width: 50%;
+                background-color: ${theme.colors.white};
+                padding: 100px 48px;
+              }
             }
           `}</style>
         </main>
