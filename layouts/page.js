@@ -8,12 +8,7 @@ import PropTypes from 'prop-types'
 // Root
 import pkg from '../package'
 
-// Components
-import Header from '../components/header'
-import Footer from '../components/footer'
-
 // UI
-import Row from '../ui/row'
 import theme from '../ui/theme'
 
 let progress
@@ -76,21 +71,7 @@ const Page = ({ children }) => {
         <script src="/static/analytics.js" />
       </Head>
 
-      <Header />
-
-      <main>
-        <Row>{children}</Row>
-      </main>
-
-      <Footer />
-
-      <style jsx>{`
-        main {
-          min-height: calc(100vh - 400px);
-          display: flex;
-          align-items: center;
-        }
-      `}</style>
+      {children}
 
       <style jsx global>
         {`
@@ -99,8 +80,8 @@ const Page = ({ children }) => {
             margin: 0;
             -webkit-font-smoothing: antialiased;
             box-sizing: border-box;
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-              'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Source Sans Pro', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+              Roboto, 'Helvetica Neue', Arial, sans-serif;
           }
 
           body {
