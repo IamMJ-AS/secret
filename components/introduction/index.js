@@ -1,8 +1,9 @@
 // Packages
 import React, { PureComponent } from 'react'
-import Link from 'next/link'
+import { For } from 'react-extras'
 
 // Components
+import ProductItem from '../product-item'
 import Footer from '../footer'
 
 // UI
@@ -10,6 +11,27 @@ import theme from '../../ui/theme'
 
 class Introduction extends PureComponent {
   render() {
+    const products = [
+      {
+        title: 'on web',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt aliquet posuerec urabitur.',
+        href: '/?content=web'
+      },
+      {
+        title: 'on cli',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt aliquet posuerec urabitur.',
+        href: '/?content=cli'
+      },
+      {
+        title: 'on slack',
+        description:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt aliquet posuerec urabitur.',
+        href: '/?content=slack'
+      }
+    ]
+
     return (
       <section>
         <h1>secret</h1>
@@ -19,41 +41,17 @@ class Introduction extends PureComponent {
         </h2>
 
         <ul>
-          <li>
-            <Link href="/?content=web" prefetch>
-              <a href="/?content=web">
-                <h4>on web</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt aliquet
-                  posuerec urabitur.
-                </p>
-              </a>
-            </Link>
-          </li>
-
-          <li>
-            <Link href="/?content=cli" prefetch>
-              <a href="/?content=cli">
-                <h4>on cli</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt aliquet
-                  posuerec urabitur.
-                </p>
-              </a>
-            </Link>
-          </li>
-
-          <li>
-            <Link href="/?content=slack" prefetch>
-              <a href="/?content=slack">
-                <h4>on slack</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt aliquet
-                  posuerec urabitur.
-                </p>
-              </a>
-            </Link>
-          </li>
+          <For
+            of={products}
+            render={item => (
+              <ProductItem
+                key={item.title}
+                title={item.title}
+                description={item.description}
+                href={item.href}
+              />
+            )}
+          />
         </ul>
 
         <Footer />
@@ -82,34 +80,6 @@ class Introduction extends PureComponent {
             color: ${theme.colors.black};
           }
 
-          a {
-            color: ${theme.colors.white};
-          }
-
-          li {
-            background-color: transparent;
-            margin-bottom: ${theme.spacing.large};
-            border-radius: ${theme.radius.medium};
-            padding: ${theme.spacing};
-            transition: ${theme.transition};
-            cursor: pointer;
-          }
-
-          li:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-          }
-
-          h4 {
-            font-size: 16px;
-            font-weight: 600;
-          }
-
-          p {
-            font-size: 13px;
-            color: #aaa;
-            margin-top: ${theme.spacing.small};
-          }
-
           @media ${theme.responsive.small}, ${theme.responsive.medium}, ${theme.responsive.large} {
             section {
               flex-basis: 50%;
@@ -117,6 +87,12 @@ class Introduction extends PureComponent {
               padding: 100px 48px;
               max-height: 100vh;
               overflow-y: hidden;
+            }
+          }
+
+          @media ${theme.responsive.large} {
+            section {
+              padding: 200px 100px;
             }
           }
         `}</style>

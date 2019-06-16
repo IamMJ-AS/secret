@@ -2,21 +2,16 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import { withRouter } from 'next/router'
-import dynamic from 'next/dynamic'
-import { Choose } from 'react-extras'
 
 // Layouts
 import Page from '../layouts/page'
 
 // Components
 import Introduction from '../components/introduction'
+import Products from '../components/products'
 
 // UI
 import theme from '../ui/theme'
-
-const WebContent = dynamic({ loader: () => import('../components/web') })
-const CliContent = dynamic({ loader: () => import('../components/cli') })
-const SlackContent = dynamic({ loader: () => import('../components/slack') })
 
 class Home extends Component {
   render() {
@@ -27,21 +22,7 @@ class Home extends Component {
         <main>
           <Introduction />
 
-          <section className="product">
-            <Choose>
-              <Choose.When condition={router.query.content === 'cli'}>
-                <CliContent />
-              </Choose.When>
-
-              <Choose.When condition={router.query.content === 'slack'}>
-                <SlackContent />
-              </Choose.When>
-
-              <Choose.Otherwise>
-                <WebContent />
-              </Choose.Otherwise>
-            </Choose>
-          </section>
+          <Products content={router.query.content} />
 
           <style jsx>{`
             @media ${theme.responsive.small},
@@ -57,8 +38,12 @@ class Home extends Component {
               .product {
                 flex-basis: 50%;
                 width: 50%;
-                background-color: ${theme.colors.white};
-                padding: 100px 48px;
+              }
+            }
+
+            @media ${theme.responsive.large} {
+              .product {
+                padding: 200px 100px;
               }
             }
           `}</style>
