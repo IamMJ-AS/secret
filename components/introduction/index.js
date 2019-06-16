@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import { For } from 'react-extras'
 
 // Components
-import ProductItem from '../product-item'
+import IntroductionItem from '../introduction-item'
 import Footer from '../footer'
 
 // UI
@@ -44,7 +44,7 @@ class Introduction extends PureComponent {
           <For
             of={products}
             render={item => (
-              <ProductItem
+              <IntroductionItem
                 key={item.title}
                 title={item.title}
                 description={item.description}

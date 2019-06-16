@@ -5,7 +5,7 @@ import Link from 'next/link'
 // UI
 import theme from '../../ui/theme'
 
-class ProductItem extends PureComponent {
+class IntroductionItem extends PureComponent {
   render() {
     const { title, description, href } = this.props
 
@@ -69,4 +69,4 @@ class ProductItem extends PureComponent {
   }
 }
 
-export default ProductItem
+export default IntroductionItem
