@@ -34,17 +34,6 @@ class Home extends Component {
                 min-height: 100vh;
                 flex-wrap: wrap;
               }
-
-              .product {
-                flex-basis: 50%;
-                width: 50%;
-              }
-            }
-
-            @media ${theme.responsive.large} {
-              .product {
-                padding: 200px 100px;
-              }
             }
           `}</style>
         </main>
