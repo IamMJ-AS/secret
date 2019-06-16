@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react'
 
 // UI
-import Button from '../../ui/button'
+import { Button } from '../../ui/button'
 import Picture from '../../ui/picture'
 import theme from '../../ui/theme'
 
