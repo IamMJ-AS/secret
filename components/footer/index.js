@@ -33,6 +33,10 @@ class Footer extends PureComponent {
         </ul>
 
         <style jsx>{`
+          footer {
+            display: none;
+          }
+
           ul {
             margin-top: ${theme.spacing.xxLarge};
           }
@@ -45,6 +49,12 @@ class Footer extends PureComponent {
           a {
             color: #aaa;
             font-size: 13px;
+          }
+
+          @media ${theme.responsive.small} {
+            footer {
+              display: block;
+            }
           }
         `}</style>
       </footer>
