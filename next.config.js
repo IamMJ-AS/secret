@@ -29,10 +29,5 @@ module.exports = withOffline({
         }
       }
     ]
-  },
-  env: {
-    apiUrl: process.env.API_URL,
-    secretToken: process.env.SECRET_TOKEN,
-    accessToken: process.env.ACCESS_TOKEN
   }
 })

@@ -11,10 +11,9 @@
     "npm": "6.5.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node server",
-    "dev": "node server",
+    "start": "next start",
+    "dev": "next",
     "build": "next build",
-    "now-build": "next build",
     "lint": "xo",
     "precommit": "lint-staged"
   },
