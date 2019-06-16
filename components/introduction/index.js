@@ -92,7 +92,7 @@ class Introduction extends PureComponent {
 
           @media ${theme.responsive.large} {
             section {
-              padding: 200px 100px;
+              padding: 150px 100px;
             }
           }
         `}</style>

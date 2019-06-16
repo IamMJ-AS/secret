@@ -37,7 +37,7 @@ class Products extends PureComponent {
             <Product
               title="secret web"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt aliquet posuerec urabitur."
-              src="static/cli.png"
+              src="static/web.png"
               alt="Command line tools"
             />
           </Choose.Otherwise>
@@ -58,7 +58,7 @@ class Products extends PureComponent {
 
           @media ${theme.responsive.large} {
             .product {
-              padding: 200px 100px;
+              padding: 150px 100px;
             }
           }
         `}</style>

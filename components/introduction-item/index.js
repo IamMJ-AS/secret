@@ -22,18 +22,19 @@ class IntroductionItem extends PureComponent {
           li {
             background-color: transparent;
             margin-bottom: ${theme.spacing.large};
-            border-radius: ${theme.radius.medium};
+          }
+
+          a {
             padding: ${theme.spacing};
+            color: ${theme.colors.white};
+            display: block;
+            border-radius: ${theme.radius.medium};
             transition: ${theme.transition};
             cursor: pointer;
           }
 
-          li:hover {
+          a:hover {
             background-color: rgba(255, 255, 255, 0.1);
-          }
-
-          a {
-            color: ${theme.colors.white};
           }
 
           h4 {
@@ -48,7 +49,7 @@ class IntroductionItem extends PureComponent {
           }
 
           @media ${theme.responsive.large} {
-            li {
+            a {
               padding: ${theme.spacing.large};
             }
 
