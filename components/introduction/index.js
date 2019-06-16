@@ -34,25 +34,27 @@ class Introduction extends PureComponent {
 
     return (
       <section>
-        <h1>secret</h1>
-        <h2>
-          send messages and files through a safe, private, and encrypted link that automatically
-          expires to ensure your stuff does not remain online forever.
-        </h2>
+        <div>
+          <h1>secret</h1>
+          <h2>
+            send messages and files through a safe, private, and encrypted link that automatically
+            expires to ensure your stuff does not remain online forever.
+          </h2>
 
-        <ul>
-          <For
-            of={products}
-            render={item => (
-              <IntroductionItem
-                key={item.title}
-                title={item.title}
-                description={item.description}
-                href={item.href}
-              />
-            )}
-          />
-        </ul>
+          <ul>
+            <For
+              of={products}
+              render={item => (
+                <IntroductionItem
+                  key={item.title}
+                  title={item.title}
+                  description={item.description}
+                  href={item.href}
+                />
+              )}
+            />
+          </ul>
+        </div>
 
         <Footer />
 
@@ -84,15 +86,18 @@ class Introduction extends PureComponent {
             section {
               flex-basis: 50%;
               width: 50%;
-              padding: 100px 48px;
+              padding: 100px 48px ${theme.spacing.xxxLarge};
               max-height: 100vh;
               overflow-y: hidden;
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
             }
           }
 
           @media ${theme.responsive.large} {
             section {
-              padding: 150px 100px;
+              padding: 150px 100px ${theme.spacing.xxxLarge};
             }
           }
         `}</style>
