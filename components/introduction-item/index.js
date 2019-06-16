@@ -43,7 +43,7 @@ class IntroductionItem extends PureComponent {
 
           p {
             font-size: 13px;
-            color: #aaa;
+            color: ${theme.colors.gray};
             margin-top: ${theme.spacing.small};
           }
 
@@ -59,7 +59,7 @@ class IntroductionItem extends PureComponent {
 
             p {
               font-size: 16px;
-              color: #aaa;
+              color: ${theme.colors.gray};
               margin-top: ${theme.spacing.small};
             }
           }

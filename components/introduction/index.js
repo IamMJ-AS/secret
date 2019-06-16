@@ -70,7 +70,7 @@ class Introduction extends PureComponent {
           h2 {
             font-weight: 400;
             font-size: 16px;
-            color: #aaa;
+            color: ${theme.colors.gray};
             line-height: 26px;
             margin-bottom: ${theme.spacing.xxLarge};
           }

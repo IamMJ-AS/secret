@@ -47,7 +47,7 @@ class Footer extends PureComponent {
           }
 
           a {
-            color: #aaa;
+            color: ${theme.colors.gray};
             font-size: 13px;
           }
 

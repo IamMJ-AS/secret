@@ -30,7 +30,7 @@ class Picture extends PureComponent {
 
           label {
             text-align: center;
-            color: #aaa;
+            color: ${theme.colors.gray};
             display: block;
             font-size: 12px;
             margin-top: ${theme.spacing.small};

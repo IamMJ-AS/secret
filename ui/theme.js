@@ -1,6 +1,8 @@
 const black = '#000000'
 const white = '#ffffff'
 
+const gray = '#aaaaaa'
+
 const theme = {
   transition: Object.assign('all 0.1s ease-in-out', {
     medium: 'all 0.2s ease-in-out'
@@ -27,7 +29,8 @@ const theme = {
   },
   colors: {
     black,
-    white
+    white,
+    gray
   }
 }
 
