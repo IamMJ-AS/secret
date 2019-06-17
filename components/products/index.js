@@ -21,6 +21,7 @@ class Products extends PureComponent {
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt aliquet posuerec urabitur."
               src="static/cli.png"
               alt="Command line tools"
+              href="/cli"
             />
           </Choose.When>
 
@@ -30,6 +31,7 @@ class Products extends PureComponent {
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt aliquet posuerec urabitur."
               src="static/cli.png"
               alt="Command line tools"
+              href="/slack"
             />
           </Choose.When>
 
@@ -39,6 +41,7 @@ class Products extends PureComponent {
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt aliquet posuerec urabitur."
               src="static/web.png"
               alt="Command line tools"
+              href="/web"
             />
           </Choose.Otherwise>
         </Choose>
