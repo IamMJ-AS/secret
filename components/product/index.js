@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react'
 
 // UI
-import { Button } from '../../ui/button'
+import { ButtonLink } from '../../ui/button'
 import Picture from '../../ui/picture'
 import theme from '../../ui/theme'
 
@@ -15,7 +15,7 @@ class Product extends PureComponent {
         <h1>{title}</h1>
         <p>{description}</p>
 
-        <Button>Learn more</Button>
+        <ButtonLink href={href}>Learn more</ButtonLink>
 
         <Picture src={src} alt={alt} />
 
