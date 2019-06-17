@@ -20,6 +20,7 @@ class Button extends PureComponent {
             letter-spacing: 2px;
             text-transform: uppercase;
             text-align: center;
+            font-size: 12px;
             border: 1px solid ${theme.colors.black};
             border-radius: ${theme.radius.medium};
             cursor: pointer;
